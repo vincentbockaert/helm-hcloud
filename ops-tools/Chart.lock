@@ -1,0 +1,12 @@
+dependencies:
+- name: hcloud-cloud-controller-manager
+  repository: https://charts.hetzner.cloud
+  version: 1.19.0
+- name: hcloud-csi
+  repository: https://charts.hetzner.cloud
+  version: 2.6.0
+- name: ingress-nginx
+  repository: https://kubernetes.github.io/ingress-nginx
+  version: 4.9.0
+digest: sha256:8222cff07d8c2d5357f2f315ee04c2cf8e45c08b63dc9a952a25ab09ea3fd8c2
+generated: "2024-01-24T20:56:55.1249557+01:00"

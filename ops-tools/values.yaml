@@ -1,0 +1,19 @@
+hcloud-cloud-controller-manager:
+  networking:
+    enabled: true
+    clusterCIDR: 10.42.0.0/16 # This is the default cluster CIDR for k3s
+
+ingress-nginx:
+  enabled: true # only enable after hcloud-cloud-controller-manager is installed
+  controller:
+    name: kubelb
+    service:
+      enabled: true
+      single: true # otherwise one is created for TCP and one for UDP
+      type: LoadBalancer
+      annotations: 
+        # https://pkg.go.dev/github.com/hetznercloud/hcloud-cloud-controller-manager/internal/annotation#Name
+        load-balancer.hetzner.cloud/location: nbg1 
+        load-balancer.hetzner.cloud/name: kubelb
+        load-balancer.hetzner.cloud/use-private-ip: "true"
+        load-balancer.hetzner.cloud/type: lb11
