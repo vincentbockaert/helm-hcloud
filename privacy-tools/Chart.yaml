@@ -1,0 +1,8 @@
+apiVersion: v2
+name: privacy-tools
+version: 0.0.1
+description: Helm chart for privacy-tools tools
+dependencies:
+  - name: privatebin
+    repository: https://privatebin.github.io/helm-chart
+    version: 0.20.1

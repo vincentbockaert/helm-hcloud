@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: privatebin
+  annotations:
+    cert-manager.io/issuer: "letsencrypt-prod"
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - privatebin.vincentbockaert.xyz
+    secretName: privatebin-vincentbockaert-xyz-tls
+  rules:
+  - host: privatebin.vincentbockaert.xyz
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: privacy-tools-privatebin
+            port:
+              number: 80

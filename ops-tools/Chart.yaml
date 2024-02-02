@@ -1,6 +1,6 @@
 apiVersion: v2
 name: ops-tools
-version: 1.2.0
+version: 1.2.1
 description: Helm chart for operations tools and infrastructure items
 dependencies:
   # prerequisite: kubectl -n kube-system create secret generic hcloud --from-literal=token=<hcloud API token>
@@ -17,3 +17,8 @@ dependencies:
     repository: https://kubernetes.github.io/ingress-nginx
     version: 4.9.0
     condition: ingress-nginx.enabled
+  
+  - name: cert-manager
+    repository: https://charts.jetstack.io
+    version: v1.13.3
+    condition: cert-manager.enabled

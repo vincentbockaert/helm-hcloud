@@ -1,0 +1,6 @@
+dependencies:
+- name: privatebin
+  repository: https://privatebin.github.io/helm-chart
+  version: 0.20.1
+digest: sha256:4eec51c6648cb07e69228292d1d0e6d3d26949a8fd9855f1b864ecb4478dd9f9
+generated: "2024-01-25T19:42:14.7135397+01:00"
