@@ -16,7 +16,7 @@ ingress-nginx:
         load-balancer.hetzner.cloud/location: nbg1 
         load-balancer.hetzner.cloud/name: kubelb
         load-balancer.hetzner.cloud/use-private-ip: "true"
-        load-balancer.hetzner.cloud/type: lb11  
+        load-balancer.hetzner.cloud/type: lb11
 
 cert-manager:
   enabled: true
